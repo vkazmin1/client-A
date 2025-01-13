@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/vkazmin1/infrastructure.git'
+    repoURL: 'https://github.com/vkazmin1/client-A.git'
     targetRevision: main
-    path: argoCD/overlays/dev/argocd-itself-application/
+    path: /overlays/dev/argocd/
   destination:
     server: https://kubernetes.default.svc
     namespace: default
