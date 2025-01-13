@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base/app/
+  - ../../base/cert-manager/
+  - ../../base/grafana/
+  - ../../base/nginx
+  
+commonLabels:
+  environment: prod
+  client: A
+  

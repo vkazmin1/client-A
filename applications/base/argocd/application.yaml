@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-self-application
+  namespace: monitoring
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/vkazmin1/infrastructure.git'
+    targetRevision: main
+    path: argoCD/overlays/dev/argocd-itself-application/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
