@@ -6,7 +6,7 @@ metadata:
 spec:
   project: project-2 #project-2
   source:
-    repoURL: 'https://github.com/vkazmin1/kustomize-example.git'
+    repoURL: 'https://github.com/vkazmin1/client-A.git'
     targetRevision: main
     path: overlays/dev/app
   destination:
